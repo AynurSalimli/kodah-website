@@ -1,0 +1,320 @@
+@import 'reset';
+@import 'mixins';
+
+.container{
+    margin: 0 auto;
+    max-width: 1220px;
+}
+
+.header{
+    padding-top: 44px;
+    font-family: "josefin slab";
+    background-color: rgb(255, 255, 255);
+    position: fixed;
+    width: 100%;
+    
+
+    &_wrapper{
+        display: flex;
+        justify-content: space-between;
+        
+    }
+    &__logo{
+        font-size: 40px;
+
+    }
+    &__menu{
+        display: flex;
+        justify-content: center;
+        font-weight: 700;
+        color: rgb(45, 0, 0);
+        .bar{
+            display: none;
+            @include mobile{
+                display: block;
+            }
+        }
+        ul{
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            font-size: 20px;
+            a{
+                color: black;
+            }
+        }
+        @include mobile{
+        display: none;   
+        }
+        @include tablet{
+            display: none;
+        }
+}
+}
+.travel{
+    &_wrapper{
+    padding-top: 116px;
+    display: flex;
+    gap: 50px;
+    @include mobile{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    @include tablet{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    }
+    &__image{
+        img{
+            width: 575px;
+            height: 600px;
+            @include mobile{
+            width: 350px;
+            height: 350px;
+            }
+        }
+    }
+
+    &__text{
+        display: flex;
+        flex-direction: column;
+        padding-top: 40px;
+        max-width: 500px;
+        height: 600px;
+        row-gap: 40px;
+        @include mobile{
+            align-items: center;
+            padding-top: 10px;
+        }
+        @include tablet{
+            // padding-left: 100px;
+        }
+        &--title{
+            font-size: 64px;
+            font-family: 'josefin slab';
+            width: 60%;
+            @include mobile{
+                font-size: 45px;
+                font-weight: 600;
+                padding-left: 40px;
+            }
+            @include tablet{
+                font-size: 45px;
+                font-weight: 600;
+                padding-left: 40px; 
+            }
+        }
+        &--main{
+            font-family: 'josefin slab';
+            font-size: 32px;
+            @include mobile{
+                font-size: 30px;
+            }
+        }
+        &--description{
+            width: 60%;
+            font-family: 'open sans';
+            line-height: 30px;
+            font-weight: 600;
+            @include mobile{
+                width: 200px;
+            }
+        }
+    }
+}
+.routes{
+    padding-top: 60px;
+    &_wrapper{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        @include mobile{
+            padding: 10px;
+        }
+    }
+    &__title{
+        display: flex;
+        justify-content: center;
+        font-size: 30px;
+        font-family: 'josefin slab';
+        padding-bottom: 40px;
+        @include mobile{
+            font-size: 20px;
+        }
+    }
+    &__items{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+        @include mobile{
+            display: grid;
+            grid-template-columns: repeat(1, 1fr)
+        }
+        @include tablet{
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+        }
+        &--card{
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            img{
+                width: 586px;
+                height: 369px;
+                @include mobile{
+                    width: 350px;
+                    height: 260px;
+                }
+            }
+            &__title{
+                font-family: 'josefin slab';
+                font-weight: 900;
+                font-size: 25px;
+                padding-top: 5px;
+                
+            }
+            &__description{
+                display: flex;
+                flex-direction: column;
+                font-family: 'open sans';
+                row-gap: 12px;
+                font-weight: 600;
+                color: rgb(126, 126, 126);
+            }
+        }
+    }
+
+    &__button{
+        padding-top: 40px;
+        button{
+            width: 200px;
+            height: 60px;
+            font-family: 'josefin slab';
+            font-size: 20px;
+            font-weight: 700;
+            background-color: #fff;
+        }
+    }
+}
+.pictures{
+    padding-top: 50px;
+    display: grid;
+    &_wrapper{
+        display: flex;
+        gap: 25px;
+        @include mobile{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+        }
+        @include tablet{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+        }
+    }
+    img{
+        width: 291px;
+        height: 291px;
+        @include mobile{
+            width: 170px;
+            height: 170px;
+
+        }
+    }
+}
+.footer{
+    padding-top: 170px;
+    padding-bottom: 50px;
+    @include mobile{
+        padding-top: 70px;
+    }
+    &_wrapper{
+        display: flex;
+        justify-content: space-between;
+        @include mobile{
+            display: flex;
+            flex-direction: column;
+            gap: 20;
+        }
+        @include tablet{
+            display: flex;
+            flex-direction: column;
+            gap: 20;
+        }
+    }
+    &__input{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        @include mobile{
+         padding-left: 10px;
+        }
+        @include tablet{
+            padding-left: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        }
+        label{
+            font-family: 'open sans';
+            font-weight: 600;
+        }
+        input{
+            width: 300px;
+            height: 50px;
+            border: none;
+            outline: none;
+            background-color: rgb(219, 219, 219);
+            
+        }   
+        ::placeholder{
+            color: rgb(129, 129, 129);
+            font-family: 'open sans';
+            padding-left: 10px;
+
+        }
+        button{
+            width: 130px;
+            height: 50px;
+            font-family: 'josefin slab';
+            font-weight: 600;
+            font-size: 18px;
+
+            background-color: transparent;
+        }
+    }
+    &__social{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @include mobile{
+            justify-content: flex-start;
+            margin-top: 30px;
+            padding-left: 10px;
+        }
+        @include tablet{
+            justify-content: flex-start;
+            margin-top: 30px;
+            padding-left: 10px;
+        }
+        i{
+            font-size: 25px;
+            display: flex;
+            width: 50px;
+            justify-content: space-between;
+        }
+        
+    }
+
+
+
